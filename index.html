@@ -1,0 +1,43 @@
+<html>
+	<meta charset="utf-8">
+	<head>
+		<title>Yogurt</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<div class='box'><a style='text-decoration: none;' href='index.html'><p class='headline'>Yogurt<img src='icon-128.png'></p></a></div>
+		<div class='box'><p class='head_desc'>这是一个用来下载网站视频的Chrome扩展程序。<br>所以你至少需要一个Chrome浏览器。</p></div>
+		<div class='box'><p class='head_desc'>目前支持大部分视频网站，如bilibili，优酷，土豆等。<br>
+		Thanks to <a href='https://github.com/soimort/you-get'>you-get project on github</a></p></div>
+		<div class='box'>
+			<p class='subtitle'><a href='setup.html'>使用指南 戳这里</a></p>
+			<p class='subtitle'><a href='download.html'>应用链接 戳这里</a></p>
+			<p class='subtitle'><a href='faq.html'>常见问题 戳这里</a></p>
+		</div>
+		<div class='box'><p class='legal_info'>请特别注意！<br>本扩展程序遵循 <a href='https://raw.githubusercontent.com/soimort/you-get/master/LICENSE.txt'>MIT 协议</a></p><p class='legal_info' hidden>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br><b>人话：如果你使用本软件进行盗版行为，或者非法行径，作者不为你负责.</b></p></div>
+		<div class='box'><p align=right>Email报bug <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p></div>
+		<div class='box'><p align=right><a href='faq.html'>FAQ</a></p></div>
+
+		<hr width=70% align=center>
+
+		<div class='box'><p align=center class='subtitle'>简单演示</p><p align=center>(点击下方图片)</p><p align=center><img id='imgshow' src='imgs/1.png' onclick='switchpic();'></p></div>
+
+		<script type="text/javascript">
+			var cur_pic = 1;
+			function switchpic(){
+				if(cur_pic<4){
+					cur_pic += 1;
+					document.getElementById('imgshow').src = "imgs/"+cur_pic.toString()+".png";
+				}else{
+					cur_pic = 1;
+					document.getElementById('imgshow').src = "imgs/1.png";
+				}
+			}
+		</script>
+		<hr width=70% align=center>
+		<div class='box'>
+			<p align=center>Yogurt Net Downloader 1.0</p>
+			<p align=center>Email <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p>
+		</div>
+	</body>
+</html>
