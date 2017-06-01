@@ -37,7 +37,7 @@ $(document).ready(function () {
 		$("#step2_"+page_id.toString()).slideToggle();
 		$("#step2_"+next_id.toString()).slideToggle();
 		$('#container').animate({
-	        scrollTop: $("#step1_box").offset().top + $("#container").scrollTop() - 30
+	        scrollTop: $("#step2_box").offset().top + $("#container").scrollTop() - 30
 	    }, 400);
 		current_page = next_id;
 	}
