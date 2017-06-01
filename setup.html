@@ -1,26 +1,75 @@
 <html>
+<head>
 	<meta charset="utf-8">
-	<head>
-		<title>Yogurt</title>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div class='box'><a style='text-decoration: none;' href='index.html'><p class='headline'>Yogurt<img src='icon-128.png'></p></a></div>
-		<div class='box'><p align=right>Email报bug <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p></div>
-		<hr width=70% align=center>
-		<div class='box'><p align=right><a href='faq.html'>FAQ</a></p></div>
-		<div class='box'>
-			<p class='subtitle'>使用指南</p>
-			<p class='detail'>第一步，右键点击这个 <a href='yogurt_chrome_app_1.0.crx' download='yogurt_chrome_app_1.0.crx' target='_blank'>链接 Chrome Extension</a>，并选择“链接另存为”，保存至桌面。<br>或者进入 <a href='download.html' target='_blank'>这个页面</a> 找到适合您的下载方式。<br>（请勿直接点击安装，Chrome会拒绝安装非Chrome应用市场提供的扩展程序，请跟着下面的步骤来~）<p align=center><img src='imgs/step1.jpg' width=70% height=auto></p></p>
-			<p class='detail'>第二步，手动打开这个链接 chrome://extensions/<br>并把这个窗口缩小，这样放在刚下载的文件旁边。<p align=center><img src='imgs/step2.jpg' width=70% height=auto></p></p>
-			<p class='detail'>第三步，将刚下载的插件拖拽至这个页面，点击“添加应用”。<br>（请注意我的扩展程序需求权限仅为网络数据交换。请勿安装需求额外权限的扩展程序。）<p align=center><img src='imgs/step3_2.jpg' width=70% height=auto></p><p align=center><img src='imgs/step3_3.jpg' width=70% height=auto></p></p>
-			<p class='detail'>第四步，在弹开的窗口上点击Yogurt Net Downloader。</p><p align=center><img src='imgs/step4.jpg' width=70% height=auto></p><p class='detail'>输入框中复制入想下载的链接地址。<p align=center><img src='imgs/step4_1.jpg' width=70% height=auto></p><p align=center><img src='imgs/step4_2.jpg' width=70% height=auto></p><p align=center><img src='imgs/step4_3.jpg' width=70% height=auto></p><p class='detail'>点击<img src='imgs/examplelink.png' height=30px width=auto>下载链接。</p><p align=center><img src='imgs/step4_f.jpg' width=70% height=auto></p></p>
-			<p class='detail'>第五步，以后再次打开时，请点击Chrome左上角的“应用”图标。<br>如果看不到应用图标，请右键点击Chrome书签栏，选择“显示应用快捷方式”。<br>或者你可以右键单击应用图标，选择“创建快捷方式”到桌面。<p align=center><img src='imgs/step5.jpg' width=70% height=auto></p></p>
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src='js/jquery-3.2.1.min.js'></script>
+	<script type="text/javascript" src='js/setup.js'></script>
+</head>
+<body>
+<div class='div_bg'>
+	<iframe width=100% height=100% border="0" id="content" src="bg.html" frameborder="0">
+	</iframe>
+	<div><img src='imgs/bg_default.jpg' width=100% height=100%></div>
+</div>
+<div id='container' class='div_container' hidden>
+
+	<div class='div_box'>
+	<p class='p_title'><a style='text-decoration: none;' href='index.html'>Yogurt<img src='imgs/icon.png'></a>安装
+	</p>
+	</div>
+
+	<div id='step1_box' class='div_box'>
+	<p id='step1_title' class='p_subtitle'>第一步 获取一个安装包  [<img class='arrow' src='imgs/downarrow.gif'>]</p>
+	<div id='step1_content' hidden>
+		<p class='p_detailtitle'>Chrome 应用市场</p>
+		<p class='p_detail' >Chrome 应用市场自2016年11月开始已经不接受新添加应用。</p>
+		<p class='p_detailtitle'>本站的链接</p>
+		<p class='p_detail' >请右键点击 <a href='yogurt_chrome_app_1.0.crx' target='_blank' download='yogurt_chrome_app_1.0.crx'>这个链接</a> ，选择 【链接另存为】</p>
+		<p class='p_detailtitle'>网盘链接</p>
+		<p class='p_detail' >百度云 链接 <a href='http://pan.baidu.com/s/1dF3Uc8L' target='_blank'>http://pan.baidu.com/s/1dF3Uc8L</a> 密码：q9f1</p>
+		<p class='p_detail'>Google Drive 链接 <a href='https://drive.google.com/file/d/0B3lKLX5vBN2BV2xfaGVxa05lNDg/view?usp=sharingl' target='_blank'>Yogurt_chrome_app.crx</a></p>
+		<p class='p_detailtitle'>GitHub 上的源代码</p>
+		<p class='p_detail' ><a href='https://github.com/yogurtNetDL/yogurt_chrome_app' target='_blank'>https://github.com/yogurtNetDL/yogurt_chrome_app</a></p>
+	</div>
+	</div>
+
+	<div id='step2_box' class='div_box'>
+	<p id='step2_title' class='p_subtitle'>第二步 添加到Chrome扩展程序  [<img class='arrow' src='imgs/downarrow.gif'>]</p>
+	<div id='step2_content' hidden>
+		<p class='p_detailtitle'></p>
+		<div id='step2_1'>
+			<p class='p_detail'>将 yogurt_chrome_app.crx 文件保存到桌面，并将下面的链接复制到Chrome浏览器中打开</p>
+			<p class='p_detail'>chrome://extensions/</p>
+			<p align=center><img src='imgs/step2_1.jpg' width=100% height=auto></p>
 		</div>
-		<hr width=70% align=center>
-		<div class='box'>
-			<p align=center>Yogurt Net Downloader 1.0</p>
-			<p align=center>Email <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p>
+		<div id='step2_2' hidden>
+			<p class='p_detail'>将 yogurt_chrome_app.crx 文件拖入进 Chrome</p>
+			<p align=center><img src='imgs/step2_2_1.jpg' width=100% height=auto></p>
+			<p class='p_detail'>点击 添加应用，完成安装。</p>
+			<p align=center><img src='imgs/step2_2_2.jpg' width=100% height=auto></p>
 		</div>
-	</body>
+		<div id='step2_3' hidden>
+			<p class='p_detail'>在弹出的页面中点击 Yogurt Net Downloader 打开。</p>
+			<p class='p_detail'>以后可以在 Chrome 左上角点击 应用 图标找到我。</p>
+			<p align=center><img src='imgs/step2_3_1.jpg' width=100% height=auto></p>
+			<p class='p_detail'>右键点击扩展应用的图标可以发送桌面快捷方式。</p>
+			<p align=center><img src='imgs/step2_3_2.png' width=100% height=auto></p>
+		</div>
+		<div>
+			<p id='prev_step' class="p_detail" style="float:left;">上一步</p>
+			<p id='next_step' class="p_detail" style="float:right;">下一步</p>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+	</div>
+
+	<div class='div_box'>
+	<p>可能遇到的问题 <a href='faq.html'>FAQ page</a></p>
+	<p>Email yogurtNetDL@gmail.com</p>
+	<p>GitHub <a href='https://github.com/yogurtNetDL/yogurt_chrome_app' target='_blank'>https://github.com/yogurtNetDL/yogurt_chrome_app</a></p>
+	</div>
+
+</div>
+
+</body>
 </html>

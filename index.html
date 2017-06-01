@@ -1,43 +1,69 @@
 <html>
+<head>
 	<meta charset="utf-8">
-	<head>
-		<title>Yogurt</title>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div class='box'><a style='text-decoration: none;' href='index.html'><p class='headline'>Yogurt<img src='icon-128.png'></p></a></div>
-		<div class='box'><p class='head_desc'>这是一个用来下载网站视频的Chrome扩展程序。<br>所以你至少需要一个Chrome浏览器。</p></div>
-		<div class='box'><p class='head_desc'>目前支持大部分视频网站，如bilibili，优酷，土豆等。<br>
-		Thanks to <a href='https://github.com/soimort/you-get'>you-get project on github</a></p></div>
-		<div class='box'>
-			<p class='subtitle'><a href='setup.html'>使用指南 戳这里</a></p>
-			<p class='subtitle'><a href='download.html'>应用链接 戳这里</a></p>
-			<p class='subtitle'><a href='faq.html'>常见问题 戳这里</a></p>
-		</div>
-		<div class='box'><p class='legal_info'>请特别注意！<br>本扩展程序遵循 <a href='https://raw.githubusercontent.com/soimort/you-get/master/LICENSE.txt'>MIT 协议</a></p><p class='legal_info' hidden>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br><b>人话：如果你使用本软件进行盗版行为，或者非法行径，作者不为你负责.</b></p></div>
-		<div class='box'><p align=right>Email报bug <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p></div>
-		<div class='box'><p align=right><a href='faq.html'>FAQ</a></p></div>
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src='js/jquery-3.2.1.min.js'></script>
+	<script type="text/javascript" src='js/index.js'></script>
+</head>
+<body>
+<div class='div_bg'>
+	<iframe width=100% height=100% border="0" id="content" src="bg.html" frameborder="0">
+	</iframe>
+	<div><img src='imgs/bg_default.jpg' width=100% height=100%></div>
+</div>
+<div id='container' class='div_container' hidden>
 
-		<hr width=70% align=center>
+	<div class='div_box'>
+	<p class='p_title'><a style='text-decoration: none;' href='index.html'>Yogurt<img src='imgs/icon.png'></a>
+	</p>
+	<p class='p_subtitle'>这是一个用来下载网站视频的<br>Chrome扩展程序</p>
+	<div id='title_content'>
+	<p>所以你至少需要一个Chrome浏览器。</p>
+	<p><a href='support_vs.html'>点击查看目前支持的视频网站列表</a></p>
+	<p>Thanks to you-get project on github</p>
+	<div id='show_navigation'><p class='p_subtitle'>展开导航  <img class='arrow' src='imgs/downarrow.gif'></p></div>
+	</div>
+	</div>
 
-		<div class='box'><p align=center class='subtitle'>简单演示</p><p align=center>(点击下方图片)</p><p align=center><img id='imgshow' src='imgs/1.png' onclick='switchpic();'></p></div>
+	<div id='navigation' class='div_box' hidden>
+	<div class='navigator_bar'><p class='p_subtitle'><a href='setup.html'>安装</a></p></div>
+	<div class='navigator_bar'><p class='p_subtitle'><a href='howtouse.html'>使用示范</a></p></div>
+	<div class='navigator_bar'><p class='p_subtitle'><a href='support_vs.html'>支持的视频网站</a></p></div>
+	<div class='navigator_bar'><p class='p_subtitle'><a href='legal.html'>免责声明</a></p></div>
+	</div>
 
-		<script type="text/javascript">
-			var cur_pic = 1;
-			function switchpic(){
-				if(cur_pic<4){
-					cur_pic += 1;
-					document.getElementById('imgshow').src = "imgs/"+cur_pic.toString()+".png";
-				}else{
-					cur_pic = 1;
-					document.getElementById('imgshow').src = "imgs/1.png";
-				}
-			}
-		</script>
-		<hr width=70% align=center>
-		<div class='box'>
-			<p align=center>Yogurt Net Downloader 1.0</p>
-			<p align=center>Email <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p>
-		</div>
-	</body>
+	<div class='div_box'>
+	<p class='p_subtitle'>为什么你要好好的用Yogurt</p>
+	<p>你欢喜于互联网上的富媒体内容，并为个人寻欢而储存</p>
+	<p>你喜悦观看的视频，然而不得保存；对个人设备无从控制，此乃违背开放互联网之行为</p>
+	<p>你寻求解脱于闭源软件或JavaScript代码，并禁止Flash运行</p>
+	<p>你为黑客精神与自由软件而欣喜</p>
+	<p class='p_subtitle'>Yogurt可以</p>
+	<p>下载流行网站之音视频, 如哔哩哔哩,优酷,土豆,TED... <a href='support_vs.html'>查看完整支持列表</a></p>
+	<p>于您心仪的媒体播放器中观看在线视频，脱离浏览器与广告</p>
+	<p>下载您喜欢网页上的图片</p>
+	<p>下载任何非HTML内容，例如二进制文件</p>
+	<p class='p_subtitle'>心动? 现在 <a href='setup.html'>安装</a> 并 <a href='howtouse.html'>查看使用范例</a></p>
+	</div>
+
+	<div class='div_box'>
+	<p class='p_subtitle'>免责声明</p>
+	<p>本软件使用 MIT 协议.</p>
+	<p>请特别注意</p>
+	<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	<br>(一个中文翻译可在<a href='http://lucien.cc/?p=15' target=_blank>http://lucien.cc/?p=15</a> 查询。)</p>
+	<p>直白的翻译<br>
+	如果你使用本软件进行盗版行为，或者非法行径，作者不为你负责.<br>
+	我们仅提供代码, 如何使用请自行考虑.</p>
+	</div>
+
+	<div class='div_box'>
+	<p>可能遇到的问题 <a href='faq.html'>FAQ page</a></p>
+	<p>Email yogurtNetDL@gmail.com</p>
+	<p>GitHub <a href='https://github.com/yogurtNetDL/yogurt_chrome_app' target='_blank'>https://github.com/yogurtNetDL/yogurt_chrome_app</a></p>
+	</div>
+
+</div>
+
+</body>
 </html>

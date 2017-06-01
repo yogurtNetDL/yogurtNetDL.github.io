@@ -1,34 +1,59 @@
 <html>
+<head>
 	<meta charset="utf-8">
-	<head>
-		<title>Yogurt</title>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div class='box'><a style='text-decoration: none;' href='index.html'><p class='headline'>Yogurt<img src='icon-128.png'></p></a></div>
-		<div class='box'><p align=right>Email报bug <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p></div>
-		<hr width=70% align=center>
-		<div class='box'>
-			<p class='subtitle'>FAQ</p>
-			<p class='subsubtitle'>Q: 这个扩展程序的工作原理是什么样子的？</p>
-			<p class='detail'>这个扩展程序通过模仿用户的访问行为，解析视频网站的视频网址，并将该网址直接提供给用户进行下载。<br>她的解析核心代码是一个python的扩展包you-get <a href='https://github.com/soimort/you-get' target='_blank'>https://github.com/soimort/you-get</a><br>这个扩展程序将上面的python扩展包集成到了服务器上，并通过代理访问的方式完成视频源地址的解析，因此免去了用户本地安装python的麻烦以及算法的更新。</p>
-			<p class='subsubtitle'>Q: 我安装后找不到程序在哪里了怎么办？</p>
-			<p class='detail'>Chrome默认左上角有个小应用图标。点击这个应用就可以看到你的应用列表。</p>
-			<p class='detail' align=center><img src="imgs/chrome_corner.png"></p>
-			<p class='detail'>此外，你还可以在应用页面，右键点击Yogurt Net Downloader的图标，发送至桌面快捷方式。</p>
-			<p class='detail' align=center><img width=70% height=auto src="imgs/chrome_apps.png"></p>
-			<p class='subsubtitle'>Q: Chrome提示扩展程序可能会损坏计算机，这个程序没有病毒吧？</p>
-			<p class='detail'>拍胸脯没有。</p>
-			<p class='detail'>添加扩展应用时，Chrome会提示该扩展应用所需要的权限。这个应用因为需要实现视频下载的功能，所以申请了基本的Chrome.Socket的使用权限。因此这个应用只可以和您的网络交换数据，它不会主动在您的电脑上添加/修改/删除任何数据。下载的视频文件也是通过Chrome的下载功能传递到本地的。</p>
-			<p class='detail' align=center><img src='imgs/yogurt_access.png' width=70%></p>
-			<p class='detail'>详细请参见GitHub源码 <a href='https://github.com/yogurtNetDL/yogurt_chrome_app' target='_blank'>https://github.com/yogurtNetDL/yogurt_chrome_app</a></p>
-			<p class='subsubtitle'>Q: 用这个程序下载视频会违法么？</p>
-			<p class='detail'>本扩展程序使用<a href='https://raw.githubusercontent.com/soimort/you-get/master/LICENSE.txt'>MIT 协议</a><br>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br>人话：如果你使用本软件进行盗版行为，或者非法行径，作者不为你负责.</p>
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src='js/jquery-3.2.1.min.js'></script>
+	<script type="text/javascript" src='js/faq.js'></script>
+</head>
+<body>
+<div class='div_bg'>
+	<iframe width=100% height=100% border="0" id="content" src="bg.html" frameborder="0">
+	</iframe>
+	<div><img src='imgs/bg_default.jpg' width=100% height=100%></div>
+</div>
+<div id='container' class='div_container' hidden>
+
+	<div class='div_box'>
+	<p class='p_title'><a style='text-decoration: none;' href='index.html'>Yogurt<img src='imgs/icon.png'></a>常见问题</p>
+	</div>
+	
+	<div class='div_box'>
+		<p id='q1' class='p_detailtitle'>Q: 这个扩展程序的工作原理是什么样子的？   <img class='arrow' src='imgs/downarrow.gif'></p>
+		<div id='a1'>
+			<p class='p_detail'>这个扩展程序通过模仿用户的访问行为，解析视频网站的视频网址，并将该网址直接提供给用户进行下载。<br>她的解析核心代码是一个python的扩展包you-get <a href='https://github.com/soimort/you-get' target='_blank'>https://github.com/soimort/you-get</a><br>这个扩展程序将上面的python扩展包集成到了服务器上，并通过代理访问的方式完成视频源地址的解析，因此免去了用户本地安装python的麻烦以及算法的更新。</p>
 		</div>
-		<hr width=70% align=center>
-		<div class='box'>
-			<p align=center>Yogurt Net Downloader 1.0</p>
-			<p align=center>Email <a target='_blank' href='mailto:yogurtNetDL@gmail.com'>yogurtNetDL@gmail.com</a></p>
+		<p id='q2'class='p_detailtitle'>Q: 我安装后找不到程序在哪里了怎么办？   <img class='arrow' src='imgs/downarrow.gif'></p>
+		<div id='a2'>
+			<p class='p_detail'>Chrome默认左上角有个小应用图标。点击这个应用就可以看到你的应用列表。</p>
+			<p align=center><img src="imgs/chrome_corner.png"></p>
+			<p class='p_detail'>此外，你还可以在应用页面，右键点击Yogurt Net Downloader的图标，发送至桌面快捷方式。</p>
+			<p align=center><img width=70% height=auto src="imgs/chrome_apps.png"></p>
 		</div>
-	</body>
+		<p id='q3' class='p_detailtitle'>Q: 为什么不能从 Chrome 应用市场下载？   <img class='arrow' src='imgs/downarrow.gif'></p>
+		<div id='a3'>
+			<p class='p_detail'>很遗憾，由于站长的拖延症，这个扩展程序开发完毕时，Chrome应用市场已经不接受新的应用申请了。</p>
+			<p align=center><img src='imgs/chromewebstore_snapshot.png' width=90%></p>
+			<p align=center><img src='imgs/emoji_regret.jpg' width=40%></p>
+		</div>
+		<p id='q4' class='p_detailtitle'>Q: Chrome提示扩展程序可能会损坏计算机，这个程序没有病毒吧？   <img class='arrow' src='imgs/downarrow.gif'></p>
+		<div id='a4'>
+			<p class='p_detail'>拍胸脯没有。</p>
+			<p class='p_detail'>详细请参见GitHub源码 <a href='https://github.com/yogurtNetDL/yogurt_chrome_app' target='_blank'>https://github.com/yogurtNetDL/yogurt_chrome_app</a></p>
+			<p class='p_detail'>此外添加扩展应用时，Chrome会提示该扩展应用所需要的权限。这个应用因为需要实现视频下载的功能，所以申请了基本的Chrome.Socket的使用权限。因此这个应用只可以和您的网络交换数据，它不会主动在您的电脑上添加/修改/删除任何数据。下载的视频文件也是通过Chrome的下载功能传递到本地的。</p>
+			<p align=center><img src='imgs/yogurt_access.png' width=70%></p>			
+		</div>
+		<p id='q5' class='p_detailtitle'>Q: 用这个程序下载视频会违法么？   <img class='arrow' src='imgs/downarrow.gif'></p>
+		<div id='a5'>
+			<p class='p_detail'>本扩展程序使用<a href='https://raw.githubusercontent.com/soimort/you-get/master/LICENSE.txt'>MIT 协议</a><br>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br>人话：如果你使用本软件进行盗版行为，或者非法行径，作者不为你负责.</p>
+		</div>
+	</div>
+
+	<div class='div_box'>
+	<p>Email yogurtNetDL@gmail.com</p>
+	<p>GitHub <a href='https://github.com/yogurtNetDL/yogurt_chrome_app' target='_blank'>https://github.com/yogurtNetDL/yogurt_chrome_app</a></p>
+	</div>
+
+</div>
+
+</body>
 </html>
