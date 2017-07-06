@@ -7,7 +7,7 @@ do
 			NAME=$NAME_SHORT$ZONE;
 			if [ "$NAME" != "ins3us-east1-b" ]
 			then
-				echo "checking $NAME"
+				echo "checking $NAME" > working.txt
 				gcloud compute instances describe $NAME --zone $ZONE | grep status > cur.txt;
 				value=$(<cur.txt);
 				if grep "TERM" cur.txt
