@@ -5,7 +5,7 @@ do
 		for ZONE in us-central1-b us-west1-b us-east1-b
 		do
 			NAME=$NAME_SHORT$ZONE;
-			if [$NAME != "ins3us-east1-b"]
+			if [ "$NAME" != "ins3us-east1-b" ]
 			then
 				echo "checking $NAME"
 				gcloud compute instances describe $NAME --zone $ZONE | grep status > cur.txt;
