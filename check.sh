@@ -1,8 +1,8 @@
 while :
 do
-	for NAME_SHORT in ins0 ins1 ins2 ins3 
+	for NAME_SHORT in ins0 ins1 ins2 
 	do
-		for ZONE in us-central1-b us-west1-b us-east1-b
+		for ZONE in us-central1-b us-west1-b 
 		do
 			NAME=$NAME_SHORT$ZONE;
 			if [ "$NAME" != "ins3us-east1-b" ]
